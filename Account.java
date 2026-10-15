@@ -52,6 +52,4 @@ public String getShortenedName() {
         return shortName;
 }
 
-a = new Account("Rachel-Zheng");
-System.out.println(a.getUsername())
 
