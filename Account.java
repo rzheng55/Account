@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class Account {
     private String username;
 
-public class Account {
-    private String username;
-
 public Account(String requestedName) throws FileNotFoundException {
         int num = 1;
         String possibleName = requestedName;
@@ -31,25 +28,30 @@ public static boolean isAvailable(String str) throws FileNotFoundException {
     return true;
 }
 
-public Account(String requestedName) throws FileNotFoundException {
-   int num = 1;
-   String possibleName = requestedName;
-   while (!isAvailable(possibleName)) {
-         possibleName = requestedName + num;
-          num++;
-          username = possibleName;
-   }
+public String getUsername() {
+    return username;
 }
+
+// public Account(String requestedName) throws FileNotFoundException {
+//    int num = 1;
+//    String possibleName = requestedName;
+//    while (!isAvailable(possibleName)) {
+//          possibleName = requestedName + num;
+//           num++;
+//           username = possibleName;
+//    }
+// }
 
 public String getShortenedName() {
     String shortenedName = username;
     int hyphen= shortenedName.indexOf("-");
     while (hyphen > 0) {
         shortenedName = shortenedName.substring(0, hyphen -1) + shortenedName.substring(hyphen + 1);
-    hyphen = shortName.indexOf("-");
+    hyphen = shortenedName.indexOf("-");
         }
 
-        return shortName;
+        return shortenedName;
+}
 }
 
 
